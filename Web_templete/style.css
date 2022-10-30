@@ -1,0 +1,548 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+html{
+  scroll-behavior: smooth;
+}
+:root {
+    --blue-color: #0db5bb;
+    --green-pink: linear-gradient(90deg, #f660ab 0%, #68c3a0 100%);
+    --pink--color: #e66c8e;
+    --blue-background: #1d1145;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+* p{
+    font-family: sans-serif;
+}
+
+/*---------  menu 1 ----------*/
+* li a{
+    text-decoration: none; /*ลบเส้นใต้*/
+    transition: .3s;
+    color: #1d1145;
+    font-size: 20px;
+}
+* li{
+    list-style: none; /* ลบวงกลมหัวข้อ */
+}
+.menu{
+    display: flex;
+    width: 100%;
+    height: 65px;
+    background: #fff;
+    position: fixed;
+    z-index: 999;
+}
+
+
+ul{
+    display: flex;
+    align-items: center;
+}
+li{
+    display: flex;
+    position: relative;
+}
+li a{
+    padding: 20px 20px;
+}
+li a:hover{
+    color: #e66c8a;
+}
+.dropdown{
+    position: absolute;
+    display: block;
+    background: #fff;
+    top:95%;
+    left:0;
+    opacity: 0; /* ทำให้สีมันโปร่งใส ล่องหน 0.4*/
+    visibility: hidden; /* ซ่อน element นั้น คล้ายๆ display: none*/
+    transition: .3s;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.dropdown li{
+    padding: 0 23px;
+    transition: .3s;
+}
+.dropdown li:hover{
+    background: rgb(58, 189, 150);
+}
+.dropdown li a{
+    transition: .3s;
+}
+.dropdown li a:hover{
+    color: rgb(255, 255, 255);
+}
+
+
+.dropdown-link:hover .dropdown{
+    opacity: 1; /* ทำให้ค่าโปร่งใสเป็น 1*/
+    visibility: visible; /*ยกเลิก visibility: hidden;*/
+}
+li a i{
+    font-size: 12px;
+    margin-left: 10px;
+}
+.logo{
+    width: 62%;
+}
+.logo img{
+    width: 100px;
+    height: auto;
+    position: relative;
+    top: 50%;
+    transform: translate(0,-50%);
+    left: 20px;
+}
+
+/*-------- Homepage ----------*/
+.home-page{
+    height: 610px;
+    width: 100%;
+    overflow: hidden;
+    background-image: url('https://images.unsplash.com/photo-1654778324619-1358338da477?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=865&q=80');
+    background-position: center;
+    background-size: cover;
+}
+.home-page h6,
+.home-page p{
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    margin: 15px 0;
+}
+.home-page h1{
+    color: rgb(255, 255, 255);
+    font-size: 64px;
+}
+
+.letter-home-page{
+    position: relative;
+    top: 130px;
+    left: 80px;
+    width: 660px;
+}
+.home-page button{
+    width: 170px;
+    height: 50px;
+    background: #e66c8a;
+    border: 0;
+    color: #fff;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 20%;
+    left: 80px;
+    transition: .3s;
+}
+.home-page button:hover{
+    filter: brightness(120%);
+}
+
+
+/*------------- header --------------- */
+.header{
+    position: relative;
+    width: 100%;
+    height: 200px;
+    padding: 70px 0 40px 0;
+}
+.header h1,
+.header p{
+    text-align: center;
+}
+.header h1{
+    font-size: 40px;
+    color: #1d1145;
+}
+.header p{
+    font-size: 16px;
+    color: #0db5bb;
+}
+
+/*------------ page2 --------------*/
+.page2{
+    padding: 30px 80px ;
+}
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 30px; /* ระยะห่างกว้าง */
+    row-gap: 30px; /* ระยะห่างคาวามยาว*/
+}
+.grid-card{
+    width: 340px;
+    height: 340px;
+    background: #1d1145;
+    border-radius: 15px;
+    padding: 30px;
+    position: relative;
+}
+.grid-card h5{
+    color: #fff;
+    font-size: 20px;
+}
+.grid-card i{
+    font-size: 34px;
+    color: #fff;
+}
+.grid-card p{
+    font-size: 16px;
+    color: #fff;
+    font-family: sans-serif;
+}
+.grid-card button{
+    margin-top: 30px;
+    width: 120px;
+    height: 40px;
+    border: 1.5px solid #fff;
+    background: none;
+    color: #fff;
+    transition: .2s;
+    border-radius: 2px;
+    position: absolute;
+    bottom: 30px;
+}
+.grid-card button:hover{
+    background: #ff8da9;
+    border: 1px solid #dc768f;
+}
+.stop_line{
+    width: 280px;
+    height: 5px;
+    border-radius: 5px;
+    background: linear-gradient(90deg, #f660ab 0%, #68c3a0 100%);
+    margin-top: 30px;
+}
+
+
+/*------------ more-services -------------*/
+.more-services{
+    position: relative;
+    width: 100%;
+    height: 150px;
+}
+.more-services button{
+    position: absolute;
+    right: 90px;
+    width: 185px;
+    height: 40px;
+    border-radius: 5px;
+    background: #e66c8e;
+    border: 0;
+    color: #fff;
+    transition: .3s;
+}
+.more-services button:hover{
+    filter: brightness(120%);
+}
+
+
+/*---------------- page3 ------------------*/
+.page3{
+    width: 100%;
+    height: 800px;
+    background: linear-gradient(to right,  #2f3c6e 0%, #367963 100%);
+    overflow: hidden;
+}
+.in-page3{
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 800px;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+.in-page3 img{
+    width: 50%;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 28%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+}
+/*------------------ page3-content ----------------*/
+.page3-content{
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    padding: 200px 60px 0px 100px;
+}
+.page3-content h6{
+    color: #53dde1;
+    font-size: 16px;
+}
+.page3-content h2{
+    font-size: 40px;
+    color: #fff;
+}
+.page3-content p{
+    font-size: 16px;
+    color: #fff;
+}
+/*----------------- page3-content-in ------------------*/
+.page3-content-in{
+    display: grid;
+    color: #fff;
+    font-family: sans-serif;
+    grid-template-columns: 1fr 1fr;
+    margin: 15px 0;
+}
+.page3-content-in p{
+    margin: 10px 5px;
+    font-size: 16px;
+}
+.page3-content-in i{
+    margin: 0 5px 5px 0;
+    color: #0db5bb;
+}
+
+
+
+/*----------------------- page4 ---------------------------*/
+.page4{
+    width: 100%;
+    height: 600px;
+    background: #fff;
+    display: flex;
+}
+.content-page4{
+    width: 50%;
+    height: 100%;
+    position: relative;
+    padding: 100px 0 80px 80px;
+}
+.content-page4 h6{
+    color: var(--blue-color);
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.stop_line_page4{
+    width: 300px;
+    margin: 15px 0;
+}
+.content-page4 h2{
+    font-size: 44px;
+}
+.content-page4 button{
+    background: var(--pink--color);
+    color: #fff;
+    border: 0;
+    width: 120px;
+    height: 40px;
+    border-radius: 5px;
+    transition: .3s;
+    font-size: 16px;
+}
+.content-page4 button:hover{
+    filter: brightness(120%);
+}
+
+/*----------------------- page4-img ---------------------------*/
+.img-page4{
+    width: 50%;
+    height: 100%;
+    position: relative;
+}
+.img-page4 img{
+    width: 300px;
+    height: auto;
+    position: relative;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+}
+.content-img-page4{
+    width: 300px;
+    height: 120px;
+    background: var(--blue-color);
+    position: absolute;
+    color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    font-family: sans-serif;
+    right: 150px;
+    bottom: 5%;
+}
+
+
+
+/*--------------------------------- container-about ---------------------------------------*/
+
+
+.container-about{
+    display: none;
+    padding-top: 65px;
+}
+
+/*---------------- about-content-homepage --------------------*/
+.header-about-content{
+    width: 100%;
+    height: 300px;
+    background-image: url('https://cutewallpaper.org/21/vector-wallpaper-4k/Wallpaper-Vector-picture,-Taiwan,-city,-skyscrapers,-art-.jpg');
+    padding: 100px;
+}
+.header-about-content h1{
+    color: #fff;
+    font-size: 52px;
+    text-align: center;
+}
+.header-about-content p{
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+}
+/*-------------------- header-about-content2 ------------------*/
+.header-about-content2{
+    width: 100%;
+    height: 850px;
+    padding: 80px 120px;
+}
+.header-about-content2-img{
+    width: 1023px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 15px;
+}
+.header-about-content2-img img{
+    width: 1023px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+/*------------------ header-about-content2-letter -------------------*/
+.header-about-content2-letter{
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    column-gap: 30px;
+    margin: 30px 0;
+}
+
+.content2-our-mission,
+.content-blue-lettle{
+    padding: 40px;
+    color: #fff;
+    border-radius: 15px;
+height: 350px;
+}
+.content2-our-mission{
+    background: linear-gradient(90deg, #f752b7 0%, #eaec59 100%);
+}
+.content-blue-lettle{
+    background: var(--blue-background);
+}
+.content2-our-mission i{
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+.content2-our-mission h3,
+.content-blue-lettle h3{
+    font-size: 32px;
+}
+.content-blue-lettle h6{
+    font-size: 16px;
+    color: var(--blue-color)
+}
+
+/*----------------------- header-about-content3 ------------------------------*/
+.header-about-content3{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+    padding: 80px 100px;
+    background: linear-gradient(90deg, #45327e 0%, rgb(14, 153, 118) 100%);
+}
+.header-about-content3 p,
+.header-about-content3 h2,
+.header-about-content3 h4{
+    color: #FFF;
+}
+/*----------------------- header-about-content3-OurVision ------------------*/
+.header-about-content3-OurVision,
+.header-about-content3-youtube,
+.header-about-content3-Join{
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+}
+.img-about3{
+    width: 300px;
+    height: 240px;
+    position: relative;
+    top: calc(35%);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+    overflow: hidden;
+}
+.img-about3 img{
+    width: 100%;
+}
+
+.header-about-content3-youtube iframe{
+    width: 480px;
+    height: 262px;
+}
+.header-about-content3-Join{
+    margin-top: 25px;
+}
+.header-about-content3-Join h4{
+    font-size: 28px;
+}
+.header-about-content3-Join button{
+    background: var(--pink--color);
+    color: #fff;
+    border: 0;
+    width: 160px;
+    height: 40px;
+    border-radius: 5px;
+    transition: .2s;
+}
+.header-about-content3-Join button:hover{
+    filter: brightness(110%);
+}
+
+/*--------------- about-content4 ---------------*/
+.about-content4{
+    width: 100%;
+    height: 200px;
+    position: relative;
+}
+.about-content4-box{
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    bottom: 0px;
+}
+.about-content4-box h6{
+    color: var(--blue-color);
+    font-size: 16px;
+    text-align: center;
+}
+.about-content4-box h2{
+    font-size: 42px;
+    text-align: center;
+}
+
+
+/*------------- about-content5 ----------------*/
+.about-content5{
+    display: flex;
+    justify-content: center;
+    height: 400px;
+}
+.about-img5{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 100px;
+}
